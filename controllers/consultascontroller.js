@@ -1,4 +1,6 @@
-const registromultimedia = require("../models/registromultimedia");
+const { Model } = require('sequelize');
+const Sequelize = require('sequelize');
+const registromultimedia = require("../models").registromultimedia;
 const categoria = require ("../models").categoria;
 const detalleoferta = require ("../models").detalleoferta;
 const ofertaempleos = require ("../models").ofertaempleo;
@@ -11,7 +13,8 @@ const usuario = require ("../models").usuario;
 
 
 
-module.exports={
+module.exports=
+{
   consultaOfertaxCategoria(req, res) {    
         return ofertaempleos.findAll({
             include: {
@@ -73,7 +76,7 @@ module.exports={
   consultamultimediaXcatalogo(req, res) {    
     return registrocatalogo.findAll({
         include: {
-          model: registromultimedia 
+          model: registromultimedia
           }
 
       })
@@ -85,7 +88,29 @@ module.exports={
   consultaempleadorXusuario(req, res) {    
     return usuario.findAll({
         include: {
-          model: empleador  
+          model: empleador
+          }
+
+      })
+        .then(usuario => res.status(200).send(usuario))
+        .catch(error => res.status(400).send(error));
+      
+  },
+  consultapostulanteXusuario(req, res) {    
+    return usuario.findAll({
+        include: {
+          model: postulantes
+          }
+
+      })
+        .then(usuario => res.status(200).send(usuario))
+        .catch(error => res.status(400).send(error));
+      
+  },
+  consultaofertaXempleador(req, res) {    
+    return empleador.findAll({
+        include: {
+          model: ofertaempleos
           }
 
       })

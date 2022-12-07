@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 
 const postulantes = require ("../models").postulante;
 
+
 module.exports=
 {
     ListarPostulante(req, res) {
@@ -9,7 +10,7 @@ module.exports=
       },
 
     
-     ListarId2(req, res) {
+    ListarId2(req, res) {
        return postulantes.findAll({
             where: {
                 id: req.params.id 
@@ -48,7 +49,5 @@ module.exports=
       })
       .then(() => res.status(200).send(true))
       .catch(error => res.status(400).send(error));
-  },
-    
-}
+  }}
   
