@@ -10,7 +10,7 @@ module.exports = {
       nacionalidad: "colombiana",
       direccion: "calle 65",
       telefono: "3216548796",
-      correo: "javigalindez@gmail.com",
+      
       id_usuario: 1,
     },
     {
@@ -22,7 +22,7 @@ module.exports = {
       nacionalidad: "colombiana",
       direccion: "calle 65",
       telefono: "3216548796",
-      correo: "javigalindez@gmail.com",
+
       id_usuario: 2,
     },
     {
@@ -34,7 +34,7 @@ module.exports = {
       nacionalidad: "colombiana",
       direccion: "calle 35",
       telefono: "310587496",
-      correo: "yonybolaños@gmail.com",
+
       id_usuario: 3,
     },
                                 

@@ -32,9 +32,7 @@ module.exports = {
       telefono: {
         type: Sequelize.STRING
       },
-      correo: {
-        type: Sequelize.STRING
-      },
+      
       id_usuario: {
         type: Sequelize.INTEGER,
         references:{

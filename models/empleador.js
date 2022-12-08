@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
     nacionalidad: DataTypes.STRING,
     direccion: DataTypes.STRING,
     telefono: DataTypes.STRING,
-    correo: DataTypes.STRING,
+    
     id_usuario: DataTypes.INTEGER
 
   }, 

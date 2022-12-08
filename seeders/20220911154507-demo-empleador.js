@@ -10,7 +10,7 @@ up: (queryInterface, Sequelize) =>{
     nacionalidad : "colombiana",
     direccion : "calle 66", 
     telefono : "3125897846",
-    correo : "jhoncapte@gmail.com", 
+    
     id_usuario: 1,
   },
   {
@@ -22,7 +22,7 @@ up: (queryInterface, Sequelize) =>{
     nacionalidad : "colombiana",
     direccion : "calle 63", 
     telefono : "3156987452",
-    correo : "leyder@gmail.com", 
+
     id_usuario: 2,
   },
   {
@@ -34,7 +34,7 @@ up: (queryInterface, Sequelize) =>{
     nacionalidad : "colombiana",
     direccion : "calle 62", 
     telefono : "31026547896",
-    correo : "sebas@gmail.com", 
+    
     id_usuario: 3,
   },
   

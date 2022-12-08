@@ -30,7 +30,6 @@ module.exports=
        nacionalidad : req.body.nacionalidad,
        direccion : req.body.direccion, 
        telefono : req.body.telefono,
-       correo : req.body.correo, 
        id_usuario : req.body.id_usuario,
       }).then(empleadores => res.status(200).send(empleadores))
       .catch(error => res.status(400).send(error));

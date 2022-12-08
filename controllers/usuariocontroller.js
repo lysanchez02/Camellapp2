@@ -25,8 +25,7 @@ Listarusuario(req, res) {
   Guardarusuario(req,res){
   let nuevousuario =  usuario.create({
     correo: req.body.correo, 
-    contraseña : req.body.contraseña,
-    rol : req.body.rol, 
+    contraseña : req.body.contraseña, 
       }).then(usuario => res.status(200).send(usuario))
       .catch(error => res.status(400).send(error));
 
