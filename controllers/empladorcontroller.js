@@ -22,15 +22,14 @@ module.exports=
 
   GuardarEmpleador(req, res){
   let empleado =  empleadores.create({
-       tipoPersona : req.body.tipoPersona, 
-       razonSocial : req.body.razonSocial,
-       nombre : req.body.nombre, 
-       apellido : req.body.apellido, 
-       fechaNacimiento : req.body.fechaNacimiento,
-       nacionalidad : req.body.nacionalidad,
-       direccion : req.body.direccion, 
-       telefono : req.body.telefono,
-       id_usuario : req.body.id_usuario,
+    nombres : req.body.nombres, 
+    apellidos : req.body.apellidos,
+    documento : req.body.documento, 
+    foto_perfil : req.body.foto_perfil, 
+    nacionalidad : req.body.nacionalidad,
+    direccion : req.body.direccion, 
+    telefono : req.body.telefono,
+    id_usuario : req.body.id_usuario,
       }).then(empleadores => res.status(200).send(empleadores))
       .catch(error => res.status(400).send(error));
 

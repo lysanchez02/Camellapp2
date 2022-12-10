@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const usuario = require('./usuario');
 module.exports = (sequelize, DataTypes) => {
   class empleador extends Model {
     /**
@@ -11,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      empleador.belongsTo(models.usuario, {foreignKey: 'id_empleador'});
+      empleador.hasMany(models.usuario, {foreignKey: 'id_empleador'});
     }
   }
   empleador.init({
@@ -21,26 +22,14 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    id_usuario: {
-      type: DataTypes.INTEGER,
-      references:{
-        model: {
-          tableName: 'usuario',
-        },
-        key:'id'
-      },
-      allowNull: false
-    },
-
-    tipoPersona: DataTypes.STRING,
-    razonSocial: DataTypes.STRING,
-    nombre: DataTypes.STRING,
-    apellido: DataTypes.STRING,
-    fechaNacimiento: DataTypes.STRING,
+    nombres: DataTypes.STRING,
+    apellidos: DataTypes.STRING,
+    documento: DataTypes.STRING,
+    foto_perfil: DataTypes.STRING,
     nacionalidad: DataTypes.STRING,
     direccion: DataTypes.STRING,
     telefono: DataTypes.STRING,
-    
+
     id_usuario: DataTypes.INTEGER
 
   }, 
