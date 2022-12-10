@@ -12,9 +12,17 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       usuario.hasMany(models.empleador, {foreignKey: 'id_usuario'});
+      usuario.hasMany(models.postulante, {foreignKey: 'id_usuario'});
+      
     }
   }
   usuario.init({
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER
+    },
     correo: DataTypes.STRING,
     contrasena: DataTypes.STRING
   }, {

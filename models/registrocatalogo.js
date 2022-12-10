@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      registrocatalogo.belongsTo(models.postulante, {foreignKey: 'id_registrocatalogo'});
+      registrocatalogo.belongsTo(models.postulante, {foreignKey: 'id_postulante'});
       registrocatalogo.hasMany(models.registromultimedia, {foreignKey: 'id_registrocatalogo'});
     }
   }

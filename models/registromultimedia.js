@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
        // define association here
-      registromultimedia.belongsTo(models.registrocatalogo, {foreignKey: 'id_registromultimedia'});
+      registromultimedia.belongsTo(models.registrocatalogo, {foreignKey: 'id_registrocatalogo'});
     }
   }
   registromultimedia.init({

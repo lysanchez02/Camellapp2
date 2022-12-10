@@ -24,7 +24,7 @@ module.exports = {
       tiempo_estimado: {
         type: Sequelize.STRING
       },
-      id_usuario: {
+      id_empleador: {
         type: Sequelize.INTEGER,
         references:{
           model: {

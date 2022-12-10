@@ -3,13 +3,14 @@ const Sequelize = require('sequelize');
 const registromultimedia = require("../models").registromultimedia;
 const categoria = require ("../models").categoria;
 const detalleoferta = require ("../models").detalleoferta;
-const ofertaempleos = require ("../models").ofertaempleo;
+const ofertaempleo = require ("../models").ofertaempleo;
 const intereses = require ("../models").intereses;
 const postulaciones = require("../models").postulaciones;
 const postulantes = require ("../models").postulante;
 const registrocatalogo = require ("../models").registrocatalogo;
 const empleador = require ("../models").empleador;
 const usuario = require ("../models").usuario;
+const postulante = require ("../models").postulante;
 
 
 
@@ -99,7 +100,7 @@ module.exports=
   consultapostulanteXusuario(req, res) {    
     return usuario.findAll({
         include: {
-          model: postulantes
+          model: postulante
           }
 
       })
@@ -110,12 +111,12 @@ module.exports=
   consultaofertaXempleador(req, res) {    
     return empleador.findAll({
         include: {
-          model: ofertaempleos
+          model: ofertaempleo
           }
 
       })
         .then(empleador => res.status(200).send(empleador))
-        .catch(error => res.status(400).send(error));
+        .catch(error => res.status(400).send(error.toString()));
       
   },
 }

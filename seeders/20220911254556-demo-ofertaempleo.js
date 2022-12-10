@@ -7,7 +7,7 @@ module.exports = {
       salario:"50000 diarios",
       horario: "7am-4pm",
       tiempo_estimado: "3 meses",
-      id_usuario: 1,
+      id_empleador: 1,
     },
     {
       nombres:"ayudante construccion",
@@ -15,7 +15,7 @@ module.exports = {
       salario:"80000 diarios",
       horario: "6am-5pm",
       tiempo_estimado: "2 meses",
-      id_usuario: 2,
+      id_empleador: 2,
     },
     {
       nombres:"oficial de obra",
@@ -23,7 +23,7 @@ module.exports = {
       salario:"70000 diarios",
       horario: "8am-7pm",
       tiempo_estimado: "6 meses",
-      id_usuario: 3,
+      id_empleador: 3,
     },
     ]);
   },

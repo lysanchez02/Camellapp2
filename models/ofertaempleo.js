@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       ofertaempleo.hasMany(models.detalleoferta, {foreignKey: 'id_ofertaEmpleo'});
       ofertaempleo.hasMany(models.postulaciones, {foreignKey: 'id_ofertaEmpleo'});
+      ofertaempleo.belongsTo(models.empleador, {foreignKey:'id_empleador'});
     }
   }
   ofertaempleo.init({
@@ -30,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     salario: DataTypes.STRING,
     horario: DataTypes.STRING,
     tiempo_estimado: DataTypes.STRING,
-    id_usuario: {
+    id_empleador: {
       type: DataTypes.INTEGER,
       references:{
         model: {
