@@ -17,7 +17,7 @@ const postulante = require ("../models").postulante;
 module.exports=
 {
   consultaOfertaxCategoria(req, res) {    
-        return ofertaempleos.findAll({
+        return ofertaempleo.findAll({
             include: {
                model: detalleoferta,
                include:{
@@ -26,7 +26,7 @@ module.exports=
               },
 
           })
-            .then(ofertaempleos => res.status(200).send(ofertaempleos))
+            .then(ofertaempleo => res.status(200).send(ofertaempleo))
             .catch(error => res.status(400).send(error));
           
       },
@@ -52,7 +52,7 @@ module.exports=
         include: {
            model: postulaciones,
            include:{
-            model: ofertaempleos
+            model: ofertaempleo
            }
           },
 
