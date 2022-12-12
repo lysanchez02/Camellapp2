@@ -84,7 +84,6 @@ router.get('/consultaempleadorXusuario', contoladorConsultas.consultaempleadorXu
 router.get('/consultapostulanteXusuario', contoladorConsultas.consultapostulanteXusuario);
 router.get('/consultaofertaXempleador', contoladorConsultas.consultaofertaXempleador);
 
-//router.post('/singin',autenticacioncontroller.signIn)
-//router.post('/singup',autenticacioncontroller.signIn)
+
 
 module.exports = router;
